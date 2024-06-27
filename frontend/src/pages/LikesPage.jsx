@@ -8,7 +8,7 @@ const LikesPage = () => {
         <thead className="text-xs uppercase bg-glass ">
           <tr>
             <th scope="col" className="p-4">
-              <div className="flex items-center">No</div>
+              <div className="flex items-center">Noo</div>
             </th>
             <th scope="col" className="px-6 py-3">
               Username
