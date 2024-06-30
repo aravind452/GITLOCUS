@@ -2,6 +2,9 @@ import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const LoginPage = () => {
+  const handleLoginWithGithub = () => {
+    window.open("/api/auth/github", "_self");
+  };
   return (
     <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0">
       <div className="w-full border-2 bg-glass rounded-lg shadow-md:mt-0 sm:max-w-md xl:py-0">
@@ -10,6 +13,7 @@ const LoginPage = () => {
             Login to your account
           </h1>
           <button
+            onClick={handleLoginWithGithub}
             type="button"
             className="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg flex gap-2 items-center justify-center w-full text-center "
           >
