@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
-console.log("dirname", __dirname);
+//console.log("dirname", __dirname);
 // should be placed on the top
 app.use(
   session({ secret: "keyboard cat", resave: false, saveUninitialized: false })
@@ -31,6 +31,6 @@ app.get("*", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server started on https://localhost:${PORT}`);
+  // console.log(`Server started on https://localhost:${PORT}`);
   connectDB();
 });

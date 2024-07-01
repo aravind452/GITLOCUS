@@ -31,7 +31,7 @@ export const likeProfile = async (req, res) => {
     const { username } = req.params;
 
     const user = await UserModel.findById(req.user._id.toString());
-    console.log("request from user", req.user);
+    //"request from user", req.user);
     // console.log(user, "Auth User!");
     const userToLike = await UserModel.findOne({ username });
     if (!userToLike) {

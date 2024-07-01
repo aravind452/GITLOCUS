@@ -13,7 +13,7 @@ function App() {
   if (loading) {
     return null;
   }
-  console.log("authenticated user", authUser);
+  // console.log("authenticated user", authUser);
   return (
     <div className="flex text-white">
       <Sidebar />

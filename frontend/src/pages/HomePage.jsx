@@ -68,7 +68,6 @@ const HomePage = () => {
 
   return (
     <div className=" m-4 border-2 text-center p-2">
-      HomePage
       <Search onSearch={onSearch} />
       {repos.length > 0 && <SortRepos onSort={onSort} sortType={sortType} />}
       <div className="flex flex-col lg:flex-row justify-center items-start">
