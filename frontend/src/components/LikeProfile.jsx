@@ -28,7 +28,7 @@ const LikeProfile = ({ userProfile }) => {
       className="p-2 text-xs w-full font-medium rounded-md bg-glass border border-blue-400 flex justify-center gap-2"
     >
       <FaHeart size={16} />
-      Likes
+      Like Profile
     </button>
   );
 };
