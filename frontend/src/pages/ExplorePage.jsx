@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 import Repos from "../components/Repos";
 import Spinner from "../components/Spinner";
@@ -7,12 +7,26 @@ const ExplorePage = () => {
   const [loading, setLoading] = useState(false);
   const [repos, setRepos] = useState([]);
   const [selectedLanguage, setSelectedLanguage] = useState("");
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("explore_language");
+    const savedRepos = localStorage.getItem("explore_repos");
+
+    if (savedLanguage) {
+      setSelectedLanguage(savedLanguage);
+    }
+
+    if (savedRepos) {
+      setRepos(JSON.parse(savedRepos));
+    }
+  }, []);
   const exploreRepos = async (language) => {
     setLoading(true);
     setRepos([]);
     try {
       const res = await fetch(`/api/explore/repos/${language}`);
       const { repos } = await res.json();
+      localStorage.setItem("explore_languages", language);
+      localStorage.setItems("explore_repos", JSON.stringify(repos));
       setRepos(repos);
       setSelectedLanguage(language);
     } catch (error) {
