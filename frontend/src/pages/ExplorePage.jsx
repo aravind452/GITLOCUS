@@ -26,7 +26,7 @@ const ExplorePage = () => {
       const res = await fetch(`/api/explore/repos/${language}`);
       const { repos } = await res.json();
       localStorage.setItem("explore_languages", language);
-      localStorage.setItems("explore_repos", JSON.stringify(repos));
+      localStorage.setItem("explore_repos", JSON.stringify(repos));
       setRepos(repos);
       setSelectedLanguage(language);
     } catch (error) {
