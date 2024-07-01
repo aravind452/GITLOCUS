@@ -38,7 +38,6 @@ function App() {
           />
         </Routes>
         <Toaster />
-        <footer>Footer</footer>
       </div>
     </div>
   );
